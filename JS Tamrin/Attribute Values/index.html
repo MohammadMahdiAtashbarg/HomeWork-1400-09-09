@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+    <p id="p1">this is a car.</p>
+    <img id="pic1" src="img/car.jpg" alt="car pic" style="height: 200px; height: 200px;">
+    <br>
+    <button type="button" onclick="clickme()">try me!</button>
+    <script>
+        var img = document.getElementById("pic1");
+        var flag = true;
+
+        function clickme() {
+            if (!flag) {
+                img.src = "img/car.jpg";
+                flag = true;
+                console.log("Car pic");
+                document.getElementById("p1").innerHTML="this is a car.";
+            } else {
+                img.src = "img/Motor.jpg";
+                flag = false;
+                console.log("Motor pic");
+                document.getElementById("p1").innerHTML="this is a motor.";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
